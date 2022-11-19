@@ -11,9 +11,11 @@ function signup(e) {
     .post("http://localhost:3000/signup", signUpDetails)
     .then((response) => {
       console.log(response);
-      window.location='login.html';
+      alert(response.data.message);
+      // window.location='login.html';
     })
     .catch((err) => {
-      console.log(err);
-    });
+      console.log(JSON.stringify(err))
+      document.body.innerHTML += `<div style="color:red";>${alert(err.message)} </div>`; 
+     });
   }

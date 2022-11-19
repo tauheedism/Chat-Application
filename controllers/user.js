@@ -22,14 +22,24 @@ exports.signup = async (req, res) => {
         .status(400)
         .json({ err: "Bad Parameters . Something is missing" });
     }
-    const saltrounds = 10;
-    bcrypt.hash(password, saltrounds, async (err, hash) => {
-      console.log(err);
-      await User.create({name, email,phoneNumber,password:hash});
-      res.status(201).json({ message: "successfully created new user" });
-    });
+    User.findAll({where:{email : email}})
+        .then(users =>{
+            if(users.length === 1)
+            {
+                 res.status(402).json({message:"User already exists, Please Login"})
+            }
+            else
+            {
+              const saltrounds = 10;
+              bcrypt.hash(password, saltrounds, async (err, hash) => {
+                console.log(err);
+                await User.create({name, email,phoneNumber,password:hash});
+                res.status(201).json({ message: "Successfully created new user" });
+              });
+            }
+        })
   } catch (error) {
-    res.status(500).json({ error: "something went wrong" });
+    res.status(500).json({ error: "Something went wrong" });
   }
 };
 
