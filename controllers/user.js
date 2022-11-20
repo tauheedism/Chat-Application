@@ -11,7 +11,7 @@ function stringValidator(string) {
 }
 
 function generateAccessToken(id,name){
-  return jwt.sign({ChatInfoId:id,name:name},'tauheed615adil02sohail12farhan22')
+  return jwt.sign({ChatInfoId:id,name:name},'tauheed615adil02sohail12farhan22tazeem420faiz524')
 }
 
 exports.signup = async (req, res) => {

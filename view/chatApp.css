@@ -1,0 +1,23 @@
+body{
+    background-color: #546e10;
+
+}
+
+h1
+{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 35px;
+    text-align: center;
+    color: #F5EFE3;
+}
+
+chat-display
+{
+    color: #F7D3BA;
+}
+
+#message{
+    margin-top: 450px;
+    align-items: center;
+    width: 93%;
+}
