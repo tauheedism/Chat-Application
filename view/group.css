@@ -1,0 +1,26 @@
+body{
+    background-image: url(https://media.istockphoto.com/id/1264145800/photo/concept-of-online-communication-or-social-networking-wooden-cubes-with-speech-bubbles-linked.jpg?b=1&s=170667a&w=0&k=20&c=pRmorPpUDObA9hA-CQMjVpsUbCp1C2CMMxTWDlO3Vsc=);
+    background-size: cover;
+}
+
+h1{
+   color:#FFD1D1;
+   text-align: center;
+}
+
+form{
+   text-align: center;
+}
+
+input{
+   background:none ;
+   width: 200px;
+   height: 19px;
+   color: rgb(13, 59, 99);
+}
+
+#group-message{
+  color: antiquewhite;
+  margin: 30px 150px;
+  border: 5px solid pink;
+}

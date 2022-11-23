@@ -26,7 +26,7 @@ function showList(user)
 
 
 window.addEventListener('DOMContentLoaded',() =>{
-    const token = localStorage.getItem('token')
+    const token = localStorage.getItem('token');
     axios.get("http://localhost:3000/getchats",{headers:{"Authorization":token}})
     .then(result =>{
         for(let i =0; i<result.data.response.length;i++)
@@ -35,7 +35,8 @@ window.addEventListener('DOMContentLoaded',() =>{
             const message = result.data.response[i].message;
             const id = result.data.response[i].id;
             const parentNode = document.getElementById('chats-display')
-            const createNewUser = `<div id='${id}'> ${name}---- ${message}--</div>`
+            const createNewUser = `<div id='${id}'> ${name}:${message}
+                                   </div>`
             parentNode.innerHTML += createNewUser;
 
         }

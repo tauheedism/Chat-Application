@@ -11,7 +11,8 @@ function login(e) {
     .then((response) => {
       alert(response.data.message);
       localStorage.setItem("token", response.data.token);
-      window.location='chatApp.html'
+      window.location='group.html';
+            // window.location='chatApp.html'
     })
     .catch((err) => {
       console.log(JSON.stringify(err));

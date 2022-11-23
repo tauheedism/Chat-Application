@@ -1,11 +1,11 @@
-const Message1 = require('../models/chat')
+const Message= require('../models/message')
 const User = require('../models/user')
 
 exports.userMessage = (req,res)=>{
    const message = req.body.chats;
 
     console.log(message);
-    Message1.create({message:message , userId:req.user.id})
+    Message.create({message:message , userId:req.user.id})
     .then(result =>{
         console.log(result)
         res.status(201).json({success:true})
@@ -18,7 +18,7 @@ exports.userMessage = (req,res)=>{
 }
 
 exports.getMessage = (req,res)=>{
-    Message1.findAll({include: [
+    Message.findAll({include: [
         {
           model: User,
           required: false,
