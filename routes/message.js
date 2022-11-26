@@ -24,9 +24,13 @@ router.get('/getmessage/:id',groupChatController.getMessage)
 
 router.post('/AddUser/:id',groupChatController.addUser)
 
-router.get('/getUser/:id',groupChatController.getUser)
+router.get('/getUser/:id',userAuthentication.authentication,groupChatController.getUser)
 
-router.delete('/deleteUser/:id',groupChatController.deleteUser)
+router.post('/deleteUser/:id',groupChatController.deleteUser)
+
+router.post('/makeAdmin/:id',groupChatController.MakeAdmin)
+
+router.post('/removeAdmin/:id',groupChatController.RemoveAdmin)
 
 module.exports = router;
 

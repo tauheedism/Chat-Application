@@ -1,51 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8" />
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1, shrink-to-fit=no"
-        />
-    
-        <!-- Bootstrap CSS -->
-        <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
-          integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
-          crossorigin="anonymous"
-        />
-    
-        <title>Login</title>
-        <link rel="stylesheet" type="text/css" href="group.css" />
-      </head>
-<body>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
-    <h1> Group Chatting</h1>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="group.css" />
+  </head>
+  <body>
+    <h2>Group Chatting Application</h2>
     <div>
-        <form onsubmit="createdGroup(event)">
-            <input type="text" name="group">
-            <button type="submit" class="btn btn-primary">ENTER</button>
-        </form>
-        <div class="group-message-div ">
-            <ul id="group-message"></ul>
-        </div>
-        <div id="message"> 
+      <form onsubmit="createdGroup(event)">
+        <input type="text" name="group" />
+        <button type="submit" class="btn btn-primary">Enter Group Name</button>
+      </form>
+      <div class="group-message-div">
+        <ul id="group-message">
 
-        </div>
-        <div id ="data">
+        </ul>
+      </div>
+      <div id="message">
+        <h1>Messages</h1>
+      </div>
+      <div id="data">
 
-        </div>
-        <div id="addUser">
+      </div>
+      <div id="addUser">
 
-        </div>
-        <div id="showAddUser">
-            
-        </div>
+      </div>
+      <div id="showAddUser">
+        <h1>Added User</h1>
+      </div>
     </div>
-
-
-
     <script
       src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -68,5 +66,5 @@
       referrerpolicy="no-referrer"
     ></script>
     <script src="group.js"></script>
-</body>
+  </body>
 </html>

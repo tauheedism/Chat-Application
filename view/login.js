@@ -12,7 +12,7 @@ function login(e) {
       alert(response.data.message);
       localStorage.setItem("token", response.data.token);
       window.location='group.html';
-            // window.location='chatApp.html'
+      // window.location='chatApp.html'
     })
     .catch((err) => {
       console.log(JSON.stringify(err));
@@ -22,6 +22,3 @@ function login(e) {
   e.target.password.value = "";
 }
 
-function forgotPassword() {
-  window.location = "forgot.html";
-}
